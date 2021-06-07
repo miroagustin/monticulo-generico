@@ -53,6 +53,9 @@ public abstract class Monticulo<TipoMonticulable extends Monticulable> {
 		}
 		return resultado;
 	}
+		public TipoMonticulable verTope() {
+		return monticulo.get(1);
+	}
 
 	protected abstract boolean compararMonticulables(TipoMonticulable uno, TipoMonticulable otro);
 
