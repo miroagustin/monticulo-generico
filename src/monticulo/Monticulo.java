@@ -11,6 +11,7 @@ public abstract class Monticulo<TipoMonticulable extends Monticulable> {
 		monticulo.add(null);
 	}
 
+
 	public void agregar(TipoMonticulable mon) {
 
 		int indicePadre = (monticulo.size()) / 2;
