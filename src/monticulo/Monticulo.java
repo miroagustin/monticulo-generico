@@ -10,10 +10,16 @@ public abstract class Monticulo<TipoMonticulable extends Monticulable> {
 		monticulo = new ArrayList<TipoMonticulable>();
 		monticulo.add(null);
 	}
+	public Monticulo(Monticulo<TipoMonticulable> origen) {
+		monticulo = new ArrayList<TipoMonticulable>();
+		monticulo.add(null);
+		for (int i = 1; i < origen.monticulo.size(); i++) {
+			agregar(origen.monticulo.get(i));
+		}
+	}
 
 
 	public void agregar(TipoMonticulable mon) {
-
 		int indicePadre = (monticulo.size()) / 2;
 		int indiceHijo = monticulo.size();
 		monticulo.add(mon);
